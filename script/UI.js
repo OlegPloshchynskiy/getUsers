@@ -11,7 +11,7 @@ class UI {
                 <div class = "row">
                     <div class = "col col-md-3">
                         <img src="${user.avatar_url}" class="img-fluid mb-2"/>
-                        <a href="${user.html_url}" class="btn btn-primary btn-block mb-4">View profile</a>
+                        <a href="${user.html_url}" class="btn btn-primary btn-block mb-4" target="_blank">View profile</a>
                     </div>
                     <div class = "col col-md-9">
                         <div class="user-info-header mb-3">
