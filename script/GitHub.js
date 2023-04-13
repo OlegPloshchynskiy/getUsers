@@ -7,7 +7,7 @@ class gitHub {
     // Get users by name
     getUser(name) {
         return new Promise((resolve, reject) => {
-            fetch(`https://api.github.com/users/${name}?client_id=${this.client_id}&client_secret=${this.client_secret}`)
+            fetch(`https://api.github.com/users/${name}`)
                 .then((response) => response.json())
                 .then((user) => resolve(user))
                 .catch((error) => reject(error));
