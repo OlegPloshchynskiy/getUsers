@@ -4,6 +4,11 @@ class UI {
         this.search_container = document.querySelector(".searchContainer");
     }
 
+    mailToBtn() {
+        // return `<a href='mailto:${user.email}'>${user.email}</a>`
+        return `<a href='mailto:Oleg250901@gmail.com'>Oleg250901@gmail.com</a>`
+    }
+
     // Show profile
     showProfile(user) {
         this.profile.innerHTML = `
@@ -24,16 +29,28 @@ class UI {
                         <ul class="list-group mb-3">
                             <li class="list-group-item">Company: ${user.company ? user.company : "N/A"}</li>
                             <li class="list-group-item">Web-site/blog: ${user.blog ? user.blog : "N/A"}</li>
+                            <li class="list-group-item">Email: ${user.email ? this.mailToBtn() : "N/A"}</li>
+                            <li class="list-group-item">Twitter: ${user.twitter_username ? user.twitter_username : "N/A"}</li>
                             <li class="list-group-item">Location: ${user.location ? user.location : "N/A"}</li>
                             <li class="list-group-item">Member since: ${user.created_at ? user.created_at : "N/A"}</li>
                         </ul>
 
                     </div>
                 </div>
+
+                <li class="list-group-item">
+                    <h1>About user:</h1>
+                    <p>
+                        ${user.bio ? user.bio : "N/A"}
+                    </p>
+                </li>
+
             </div>
             <h3 class="page-heading mb-3">Latest repos: </h3>
         `;
     }
+
+
 
 
     // Show alert
